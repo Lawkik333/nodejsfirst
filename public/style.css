@@ -18,3 +18,24 @@ fieldset{
 legend{
     color:blue;
 }
+li{
+    border:2px solid black;
+    width:fit-content;
+    margin:2px;
+}
+a{
+   
+    text-decoration: none;
+    padding:2px;
+    background-color:aqua;
+    color:red;
+    
+}
+a:hover{
+    background-color:yellowgreen;
+    color:red;
+}
+a:active {
+    background-color:blue;
+    color:red;
+}
