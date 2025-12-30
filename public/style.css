@@ -12,7 +12,9 @@ fieldset{
     display: flex;
     flex-wrap:wrap;
    max-width: 600px;
+   gap:2px;
+  
 }
 legend{
-    color:blue
+    color:blue;
 }
