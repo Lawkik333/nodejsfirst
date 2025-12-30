@@ -50,9 +50,13 @@ app.post("/",async (req,res)=>{
 app.get("/:shortlink",async (req,res)=>{
     const {shortlink}=req.params;
     const links=await loadLink();
+    if(!links[shortlink]) res.redirect("/");
+    else
     res.redirect(links[shortlink]);
     
+    
 });
+
 
 
 
