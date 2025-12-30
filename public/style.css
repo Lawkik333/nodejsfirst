@@ -1,3 +1,14 @@
 body{
     background-color:pink;
 }
+#container{
+    width:fit-content;
+}
+button{
+    background-color: yellow;
+    color:brown;
+}
+fieldset{
+    
+    display:flex;
+}
