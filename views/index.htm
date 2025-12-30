@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Loukik</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>URL SHORTNER</h1>
+        <form method="POST" action="/">
+            <div>
+                <label for="url">Enter url</label>
+                <input type="url" name="url" id="url" required>
+            </div>
+            <div>
+                <label for="shortCode">Enter Short Code</label>
+                <input type="text" name="shortCode" id="shortCode" required>
+            </div>
+            <button type="submit">Shorten</button>
+        </form>
+        <h2>URL SHORTNER</h2>
+        <div>
+            <ul>{{URL_SHORTNER}}</ul>
+        </div>
+
+    </div>
+</body>
