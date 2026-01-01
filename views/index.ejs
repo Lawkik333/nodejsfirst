@@ -27,7 +27,19 @@
         </form>
         <h2>URL SHORTNER</h2>
         <div>
-            <ul>{{URL_SHORTNER}}</ul>
+            <ul>
+                <!-- Object.entries(links).map(
+        ([shortCode,url])=>
+        `<li><a href="/${shortCode}" target="_blank">${req.host}/${shortCode}</a></li>`
+    ).join("") -->
+                    <% Object.entries(links).map(([shortCode,url])=>{ %>
+                    <li>
+                        <a href="/<%=shortCode%>" target="_blank"><%=hosts%>/<%=shortCode%> </a>
+                    </li>
+                    <% });%>
+
+
+            </ul>
         </div>
 
     </div>

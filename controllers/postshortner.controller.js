@@ -1,20 +1,17 @@
 
 import {loadLink,savelink} from "../models/shortner.model.js"
 import crypto from "crypto";
-import fs from "fs/promises";
-import path from "path";
 
-const filePath=path.join("views","index.htm");
+
+
+
+
 
 export const homefun= async (req,res)=>{
     const links=await loadLink();
+   
     
-    const file=await fs.readFile(filePath); 
-    const content=file.toString().replaceAll("{{URL_SHORTNER}}",Object.entries(links).map(
-        ([shortCode,url])=>
-        `<li><a href="/${shortCode}" target="_blank">${req.host}/${shortCode}</a></li>`
-    ).join(""));
-    return res.send(content);
+    return res.render("index", {links,hosts:req.host})
 }
 
 
